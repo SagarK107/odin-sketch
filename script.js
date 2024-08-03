@@ -40,7 +40,11 @@ function popUpResize()
         window.alert("Number should be between 1 and 100");
     }
     else{
-        
+        //clear element
+        while(body.firstChild)
+        {
+            body.removeChild(body.lastChild);
+        }
         createGrid(gridSize);
     }
 
